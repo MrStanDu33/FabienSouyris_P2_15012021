@@ -13,7 +13,20 @@ ul {
     padding: 0;
 }
 
+ol {
+    margin: 0;
+    padding: 0;
+}
+
 figure {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+p {
     margin: 0;
 }
 
@@ -64,7 +77,7 @@ figure {
     border-top: 2px solid transparent; 
     margin-right: 67px;  
     line-height: 50px;    
-    color: black;
+    color: #000;
     text-decoration: none;   
 }
 
@@ -129,13 +142,13 @@ figure {
     width: 14rem;
     box-sizing: border-box;
     font-weight: bold;
-    color: black;
+    color: #000;
 }
 
 #search_button
 {
     background-color: #0065FC;
-    color: white;
+    color: #fff;
     font-weight: bold;
     border: none;
     border-radius: 0 1rem 1rem 0;
@@ -248,40 +261,50 @@ figure {
   border-radius: 1.5rem;
 }
 
-
-
-
 #hosting_main_list
 {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    
+    justify-content: space-evenly;
 }
 
 .hosting_main_cards
 {
     width: 320px;
     height: 270px;
-    border: 2px solid black;
+    border: 2px solid #fff;
     border-radius: 1rem;
-    box-shadow: 3px 3px 3px 3px black;
-    padding: 0 0;
-    background-color: white;
+    box-shadow:
+        0 1.4px 2.6px rgba(0, 0, 0, 0.02),
+        0 3.3px 6.2px rgba(0, 0, 0, 0.028),
+        0 6.3px 11.6px rgba(0, 0, 0, 0.035),
+        0 11.2px 20.8px rgba(0, 0, 0, 0.042),
+        0 20.9px 38.9px rgba(0, 0, 0, 0.05),
+        0 50px 93px rgba(0, 0, 0, 0.07);
+    padding: 0;
+    background-color: #fff;
     overflow: hidden;
+    margin: 9px;
  }
 
 .hosting_main_cards_link
 {
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: stretch;
     height: 100%;
     width: 100%;
 }
 
-.hosting_main_cards_figure
-{
-    display: inline-block;
+.hosting_main_cards_link .informations {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100%;
+    padding: 8px;
 }
 
 .hosting_main_cards_images
@@ -291,19 +314,26 @@ figure {
     object-fit: cover;
 }
 
-.hosting_main_cards_caption
+.hosting_main_cards_title
 {
-    color: black;
+    color: #000;
+    flex-grow: 1;
 }
 
 .hosting_main_cards_text
 {
-    color: black;
+    color: #000;
 }
 
 .hosting_main_cards_text_price
 {
     font-weight: bold;
+}
+
+.hosting_main_cards_stars {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
 }
 
 .icon_star[data-active="true"]
