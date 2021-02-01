@@ -2,32 +2,18 @@ html
 {
     font-size: 100%;
 }
-body
+body, ul, ol
 {
     margin: 0;
     padding:0;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-ol {
-    margin: 0;
-    padding: 0;
-}
-
-figure {
+figure, h3, p {
     margin: 0;
 }
 
-h3 {
-    margin: 0;
-}
-
-p {
-    margin: 0;
+* {
+    box-sizing: border-box;
 }
 
 #main_header
